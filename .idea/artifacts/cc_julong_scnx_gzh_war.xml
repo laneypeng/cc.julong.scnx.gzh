@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cc.julong.scnx.gzh:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="scnx.gzh.war">
+      <element id="artifact" artifact-name="cc.julong.scnx.gzh:war exploded" />
+    </root>
+  </artifact>
+</component>
