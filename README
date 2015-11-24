@@ -1,0 +1,41 @@
+操作Zookeeper，在上面创建节点并在节点下写入数据调用下面的类
+cc.julong.scnx.gzh.zookeeper.ZookeeperHelper
+实例代码如下：
+        ZookeeperHelper sample = new ZookeeperHelper();
+        //创建连接
+        sample.createConnection();
+        //创建节点并写入数据
+        sample.createPath( ZK_PATH, "1,FSN_20151124,hdfs://julong/fsndata/20151124" ) ;
+        //释放连接
+        sample.releaseConnection();
+
+注意：要修改classpath下的config.properties中的以下两个参数
+        zookeeper.hosts=dev02:2181,dev03:2181,dev04:2181 //zookeeper的hostname,2181是zookeeper的端口
+        zookeeper.timeout=360000 //连接的超时时间
+
+操作HDFS，将本地目录下的文件上传到HDFS上指定目录，调用下面的类
+cc.julong.scnx.gzh.hdfs.HdfsHelper
+实例代码如下：
+        //创建配置文件
+        Configuration conf = new Configuration();
+        conf.addResource("core-site.xml");
+        conf.addResource("hdfs-site.xml");
+        conf.set("fs.hdfs.impl",org.apache.hadoop.hdfs.DistributedFileSystem.class.getName());
+        conf.set("fs.file.impl",org.apache.hadoop.fs.LocalFileSystem.class.getName());
+        //本地文件路径，该路径下直接是fsn zip文件，不在有文件夹
+        String localPath = "/fsn/20151124";
+        //数据上传到HDFS上的路径
+        String hdfsPath = "hdfs://julong/fsndata/20151124";
+        HdfsHelper.copyFromLocal(conf, localPath, hdfsPath);
+注意：要将hadoop集群中的/etc/hadoop/conf目录下的core-site.xml,hdfs-site.xml文件复制到你的classpath目录下
+
+
+整个的冠字号数据导入流程如下：
+1.中继上传压缩的zip文件到省行的ftp或者sftp，zip文件中可能包含多个fsn文件，zip文件命名规则：区域_网点_法人_时间(yyyyMMddHHmmss),例如：20013_45632_871012_20151124203752.zip
+2.每天冠字号系统定时（一般晚上凌晨）将数据通过提供的API将数据写入到HDFS上的指定目录，一般目录的命名最好按天（yyyyMMdd）
+3.数据成功写入到HDFS上以后，组成亿条记录，记录的格式：文件数据量,表名,数据在hdfs上的路径，字段之间用英文状态的逗号隔开，例如20,FSN_20151124,hdfs://julong/fsndata/20151124
+    表名统一使用FSN_作为前缀，每天一张表，后面的名称是天（yyyyMMdd）,例如：FSN_20151124
+4.调用API在zookeeper上根目录上创建一个节点/gzh,并将上面组成的记录写入到这个节点中
+5.剩下的是有我这边写一个监控服务，发现/gzh节点被创建，我会读取这个节点中的内容，并提交Mapreduce任务到Hadoop集群完成数据导入
+6.数据导入完成以后，我会删除zookeeper上的/gzh节点
+

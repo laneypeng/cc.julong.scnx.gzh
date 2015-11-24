@@ -38,9 +38,6 @@
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils-core:1.8.0" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:2.5.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.curator:curator-framework:3.0.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.curator:curator-client:3.0.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.curator:curator-recipes:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.4.6" level="project" />
     <orderEntry type="library" name="Maven: jline:jline:0.9.94" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty:3.7.0.Final" level="project" />
@@ -52,6 +49,7 @@
     <orderEntry type="library" name="Maven: org.apache.directory.server:apacheds-i18n:2.0.0-M15" level="project" />
     <orderEntry type="library" name="Maven: org.apache.directory.api:api-asn1-api:1.0.0-M20" level="project" />
     <orderEntry type="library" name="Maven: org.apache.directory.api:api-util:1.0.0-M20" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.curator:curator-framework:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-hdfs:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.mortbay.jetty:jetty:6.1.26" level="project" />
@@ -98,6 +96,8 @@
     <orderEntry type="library" name="Maven: com.thoughtworks.paranamer:paranamer:2.3" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.2.4" level="project" />
     <orderEntry type="library" name="Maven: com.jcraft:jsch:0.1.42" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.curator:curator-client:2.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.curator:curator-recipes:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:1.3.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.tukaani:xz:1.0" level="project" />
@@ -132,42 +132,5 @@
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-hdfs:test-jar:tests:2.2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.xfire:xfire-all:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.xfire:xfire-aegis:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: net.java.dev.stax-utils:stax-utils:20040917" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.xfire:xfire-ws-security:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: jmock:jmock:1.0.1" level="project" />
-    <orderEntry type="library" name="Maven: xfire:opensaml:1.0.1" level="project" />
-    <orderEntry type="library" name="Maven: bouncycastle:bcprov-jdk15:133" level="project" />
-    <orderEntry type="library" name="Maven: xml-security:xmlsec:1.3.0" level="project" />
-    <orderEntry type="library" name="Maven: wss4j:wss4j:1.5.1" level="project" />
-    <orderEntry type="library" name="Maven: commons-discovery:commons-discovery:0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.xfire:xfire-core:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: javax.mail:mail:1.4" level="project" />
-    <orderEntry type="library" name="Maven: wsdl4j:wsdl4j:1.6.1" level="project" />
-    <orderEntry type="library" name="Maven: jaxen:jaxen:1.1-beta-9" level="project" />
-    <orderEntry type="library" name="Maven: xerces:xmlParserAPIs:2.6.2" level="project" />
-    <orderEntry type="library" name="Maven: stax:stax-api:1.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.ws.commons:XmlSchema:1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.woodstox:wstx-asl:3.2.0" level="project" />
-    <orderEntry type="library" name="Maven: jdom:jdom:1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.xfire:xfire-java5:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: xfire:xfire-jsr181-api:1.0-M1" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.xfire:xfire-generator:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.xfire:xfire-jaxb2:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.xml.bind:jaxb-xjc:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.xfire:xfire-xmlbeans:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: xmlbeans:xbean:2.2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.xfire:xfire-annotations:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: commons-attributes:commons-attributes-api:2.1" level="project" />
-    <orderEntry type="library" name="Maven: ant:ant:1.5" level="project" />
-    <orderEntry type="library" name="Maven: qdox:qdox:1.5" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.xfire:xfire-jaxws:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: javax.xml.ws:jaxws-api:2.0" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.xml.messaging.saaj:saaj-impl:1.3" level="project" />
-    <orderEntry type="library" name="Maven: javax.xml.soap:saaj-api:1.3" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.xfire:xfire-spring:1.2.6" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xbean:xbean-spring:2.8" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring:1.2.6" level="project" />
   </component>
 </module>

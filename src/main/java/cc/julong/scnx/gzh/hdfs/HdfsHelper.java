@@ -4,7 +4,6 @@ import cc.julong.scnx.gzh.zookeeper.ZookeeperHelper;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.hbase.HBaseConfiguration;
 
 import java.io.File;
 import java.io.IOException;
