@@ -2,9 +2,6 @@ package com.apache.hbase.bulkimport;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 
 import com.apache.hbase.query.util.PropertiesHelper;
 import org.apache.hadoop.conf.Configuration;
@@ -23,11 +20,9 @@ import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable;
 import org.apache.hadoop.hbase.io.compress.Compression;
-import org.apache.hadoop.hbase.util.Bytes;
 
 import org.apache.hadoop.mapreduce.Counter;
 import org.apache.hadoop.mapreduce.Counters;
-import org.apache.hadoop.security.UserGroupInformation;
 
 
 /**

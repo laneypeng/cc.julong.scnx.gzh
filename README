@@ -39,3 +39,5 @@ cc.julong.scnx.gzh.hdfs.HdfsHelper
 5.剩下的是有我这边写一个监控服务，发现/gzh节点被创建，我会读取这个节点中的内容，并提交Mapreduce任务到Hadoop集群完成数据导入
 6.数据导入完成以后，我会删除zookeeper上的/gzh节点
 
+
+
