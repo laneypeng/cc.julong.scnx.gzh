@@ -174,5 +174,5 @@
         <jersey.version>2.4</jersey.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 </project>
